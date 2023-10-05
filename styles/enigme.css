@@ -1,0 +1,391 @@
+@font-face {
+    font-family: "Panthera";
+    src: url(../fonts/panthera/PantheraRegular-MVZ9J.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Beyno";
+    src: url(../fonts/beyno/BEYNO.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Wakanda forever";
+    src: url(../fonts/wakanda-forever/WakandaForever-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Cantarell";
+    src: url(../fonts/cantarell/Cantarell-Regular.ttf) format("TrueType");
+}
+
+:root {
+    --violet: #DF99F2;
+    --white: #ffffff;
+    --gris: #9E91B7;
+    --rose: #F2CEF2;
+    --clear-blue: #3D2DA6;
+    --blue: #07338C;
+    --deep-blue: #021740;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--white);
+    font-family: "Cantarell", sans-serif;
+    font-size: 1rem;
+    background-image: url(../assets/All_pages/arrière_plan.png);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* HEADER */
+
+nav {
+    padding: 3rem 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    height: 1rem;
+}
+
+.logo img {
+    height: 1.5rem;
+}
+
+.logo .cross {
+    height: 33%;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.nav-links {
+    font-family: "Beyno";
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.link-active {
+    color: var(--violet);
+    text-decoration: underline;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.img-hover:hover {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(61%) saturate(1896%) hue-rotate(212deg) brightness(100%) contrast(90%);
+}
+
+
+/* Fin HEADER */
+
+.banner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    text-align: start;
+    padding-bottom: 3rem;
+}
+
+.banner-wrapper-image {
+    display: block;
+}
+
+.banner-wrapper-image img {
+    width: 100%;
+}
+
+.banner> :not(.banner-wrapper-image) {
+    position: relative;
+}
+
+.banner> :not(.banner-wrapper-image)::after {
+    content: "";
+    background: url(../assets/Enigme/Pantherenigme3.png);
+    background-size: 100%;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.banner-wrapper-text {
+    margin: 0 auto 0 0;
+    padding: 8rem 0;
+    width: 80%;
+}
+
+.banner-title {
+    color: var(--gris);
+    font-family: "Beyno", sans-serif;
+    margin-bottom: 8rem;
+    font-size: 3.8rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.banner-title:hover {
+    font-size: 4.5rem;
+}
+
+.banner-description {
+    margin: 0 0 0 auto;
+    width: 90%;
+    margin-bottom: 0.8rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.enigme-cercle {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.enigme-cercle::before {
+    content: "";
+    display: block;
+    background: url(../assets/Enigme/Pantherenigme2.png);
+    background-size: 100% 100%;
+    position: absolute;
+    top: -100%;
+    left: -25%;
+    width: 150%;
+    height: 300%;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.enigme {
+    width: 80%;
+    margin: 0 auto;
+    padding: 6rem 0 8rem 0;
+}
+
+.enigme-problem {
+    font-family: "Wakanda forever", sans-serif;
+    width: 80%;
+    font-size: 2rem;
+    color: var(--gris);
+    margin-bottom: 4rem;
+    letter-spacing: 0.5rem;
+}
+
+.enigme-solution {
+    display: flex;
+    gap: 20%;
+}
+
+.transcript> :first-child {
+    margin-bottom: 1.8rem;
+}
+
+.transcript-item {
+    font-family: "Wakanda forever", sans-serif;
+}
+
+.indice {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.enigme form {
+    width: 40%;
+}
+
+.enigme form p {
+    margin-bottom: 1rem;
+}
+
+.enigme form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 3.375rem;
+    border: 1px solid var(--white);
+    border-radius: 1.3rem;
+    background: transparent;
+    padding: .625rem 1.4rem;
+    color: var(--white);
+}
+
+.enigme form button {
+    color: var(--deep-blue);
+    background-color: #f2cef2;
+    display: block;
+    max-width: max-content;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border-radius: 1.3rem;
+    padding: .625rem 1.4rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--clear-blue);
+    padding: 6rem 3rem 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    gap: 6rem;
+}
+
+.footer-logo {
+    position: relative;
+    width: 300px;
+    height: 335px;
+}
+
+.footer-logo:hover,
+.reseaux-hover:hover {
+    transform: scale(1.1);
+}
+
+#bulles {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo-bulles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 7rem;
+}
+
+.footer-reseaux {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.footer-droits {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: smaller;
+    list-style-type: disc;
+}
+
+.footer-droits li {
+    margin-right: 0.625rem;
+}
+
+.list1 {
+    list-style-type: none;
+}
+
+.footer-titre {
+    font-size: 1.375rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 2rem;
+}
+
+.lienfooter:hover {
+    text-decoration: underline;
+}
+
+.aside {
+    position: fixed;
+    top: 0;
+    height: 50vh;
+    left: 0.5rem;
+    border-left: 3px solid #9e91b7;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-line {
+    height: 100%;
+    border-right: 3px solid #9e91b7;
+}
+
+.aside-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0 0.2rem;
+    margin-right: -0.5rem;
+}
+
+.aside-socials a:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(0%) hue-rotate(235deg) brightness(104%) contrast(101%);
+}
+
+
+/* Fade In */
+
+.fade-in.fade-in-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

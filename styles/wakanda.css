@@ -1,0 +1,358 @@
+@font-face {
+    font-family: "Panthera";
+    src: url(../fonts/panthera/PantheraRegular-MVZ9J.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Beyno";
+    src: url(../fonts/beyno/BEYNO.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Wakanda forever";
+    src: url(../fonts/wakanda-forever/WakandaForever-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Cantarell";
+    src: url(../fonts/cantarell/Cantarell-Regular.ttf) format("TrueType");
+}
+
+:root {
+    --violet: #DF99F2;
+    --white: #ffffff;
+    --gris: #9E91B7;
+    --rose: #F2CEF2;
+    --clear-blue: #3D2DA6;
+    --blue: #07338C;
+    --deep-blue: #021740;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--white);
+    font-family: "Cantarell", sans-serif;
+    font-size: 1rem;
+    background-image: url(../assets/All_pages/arrière_plan.png);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* HEADER */
+
+nav {
+    padding: 3rem 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    height: 1rem;
+}
+
+.logo img {
+    height: 1.5rem;
+}
+
+.logo .cross {
+    height: 33%;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.nav-links {
+    font-family: "Beyno";
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.link-active {
+    color: var(--violet);
+    text-decoration: underline;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.img-hover:hover {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(61%) saturate(1896%) hue-rotate(212deg) brightness(100%) contrast(90%);
+}
+
+
+/* Fin Header */
+
+.banner {
+    background-image: url(../assets/Wakanda/Pantherwakanda1.png);
+    background-size: cover;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15rem;
+    padding-left: 10rem;
+    padding-bottom: 20rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.banner-title {
+    font-family: "Beyno";
+    color: var(--gris);
+    font-size: 68px;
+    font-weight: 300;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.banner-title:hover {
+    font-size: 78px;
+}
+
+.banner-subtitle {
+    font-family: "Wakanda forever";
+    color: var(--gris);
+    font-size: 43px;
+    margin-top: 0.5rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.banner-subtitle:hover {
+    font-size: 53px;
+}
+
+.banner-text p {
+    width: 35%;
+    text-align: justify;
+    margin-top: 3rem;
+}
+
+.quote {
+    font-size: .875rem;
+}
+
+
+/* Section History of Wakanda */
+
+#wakanda-history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    gap: 7rem;
+    padding: 10%;
+    text-align: justify;
+    position: relative;
+}
+
+#wakanda-history>* {
+    position: relative;
+    z-index: 1;
+}
+
+#wakanda-history::after {
+    content: "";
+    background-image: url(../assets/Wakanda/Pantherwakanda2.png);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.15;
+}
+
+#wakanda-history p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#wakanda-history h3 {
+    font-family: "Beyno";
+    color: var(--gris);
+    font-size: 1.3rem;
+}
+
+#wakanda-history img {
+    width: 100%;
+}
+
+.video iframe {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.wakanda-img:hover {
+    transform: scale(1.2);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--clear-blue);
+    padding: 6rem 3rem 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    gap: 6rem;
+}
+
+.footer-logo {
+    position: relative;
+    width: 300px;
+    height: 335px;
+}
+
+.footer-logo:hover,
+.reseaux-hover:hover {
+    transform: scale(1.1);
+}
+
+#bulles {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo-bulles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 7rem;
+}
+
+.footer-reseaux {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.footer-droits {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: smaller;
+    list-style-type: disc;
+}
+
+.footer-droits li {
+    margin-right: 0.625rem;
+}
+
+.list1 {
+    list-style-type: none;
+}
+
+.footer-titre {
+    font-size: 1.375rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 2rem;
+}
+
+.lienfooter:hover {
+    text-decoration: underline;
+}
+
+.aside {
+    position: fixed;
+    top: 0;
+    height: 50vh;
+    left: 0.5rem;
+    border-left: 3px solid #9e91b7;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-line {
+    height: 100%;
+    border-right: 3px solid #9e91b7;
+}
+
+.aside-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0 0.2rem;
+    margin-right: -0.5rem;
+}
+
+.aside-socials a:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(0%) hue-rotate(235deg) brightness(104%) contrast(101%);
+}
+
+
+/* Fade In */
+
+.fade-in.fade-in-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

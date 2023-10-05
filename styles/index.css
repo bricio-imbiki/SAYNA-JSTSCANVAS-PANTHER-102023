@@ -1,0 +1,608 @@
+@font-face {
+    font-family: "Panthera";
+    src: url(../fonts/panthera/PantheraRegular-MVZ9J.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Beyno";
+    src: url(../fonts/beyno/BEYNO.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Wakanda forever";
+    src: url(../fonts/wakanda-forever/WakandaForever-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Cantarell";
+    src: url(../fonts/cantarell/Cantarell-Regular.ttf) format("TrueType");
+}
+
+:root {
+    --violet: #DF99F2;
+    --white: #ffffff;
+    --gris: #9E91B7;
+    --rose: #F2CEF2;
+    --clear-blue: #3D2DA6;
+    --blue: #07338C;
+    --deep-blue: #021740;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--white);
+    font-family: "Cantarell", sans-serif;
+    font-size: 1rem;
+    background-image: url(../assets/All_pages/arrière_plan.png);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* HEADER */
+
+nav {
+    padding: 3rem 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    height: 1rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.logo img {
+    height: 1.5rem;
+}
+
+.logo .cross {
+    height: 33%;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.nav-links {
+    font-family: "Beyno";
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.link-active {
+    color: var(--violet);
+    text-decoration: underline;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.img-hover:hover {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(61%) saturate(1896%) hue-rotate(212deg) brightness(100%) contrast(90%);
+}
+
+
+/* Fin header */
+
+
+/* Main */
+
+.h2 {
+    font-family: 'Beyno';
+    color: var(--gris);
+    font-size: 2rem;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.banner-text {
+    width: 30%;
+    display: flex;
+    gap: 100%;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+.banner-text *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.banner-text a {
+    text-decoration: underline;
+}
+
+.banner-text h1 {
+    font-family: 'Panthera';
+    color: var(--gris);
+    font-size: 4.25rem;
+}
+
+.banner-text h1:hover {
+    font-size: 4.75rem;
+}
+
+.banner-text h2:hover {
+    font-size: 2.625rem;
+}
+
+.banner-img {
+    width: 70%;
+}
+
+.banner-img img {
+    width: 100%;
+}
+
+
+/* Section Personnages */
+
+#personnages {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+}
+
+.character {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--deep-blue);
+    padding-left: 2%;
+    width: 43.5%;
+}
+
+.personnage {
+    width: 12%;
+    padding-left: 1%;
+    background-color: var(--deep-blue);
+}
+
+.personnages-text {
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 60%;
+}
+
+.personnages-text h2 {
+    padding-bottom: 3%;
+}
+
+.personnages-text p {
+    padding-top: 5%;
+    font-size: .8rem;
+    text-align: justify;
+}
+
+.personnages-text a {
+    padding-top: 5%;
+    font-size: .8rem;
+    text-align: justify;
+    text-decoration: underline;
+}
+
+.personnages-img {
+    width: 40%;
+}
+
+.img-active {
+    transform: scale(1.2);
+}
+
+.character img:hover {
+    transform: scale(1.1);
+}
+
+.personnage img:hover {
+    transform: scale(1.1);
+}
+
+.personnages-img img {
+    width: auto;
+    height: 220px;
+    border-radius: 5%;
+}
+
+
+/* Fin section Personnages */
+
+
+/* Section Prince */
+
+#prince {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    margin-left: 13%;
+}
+
+.prince-text {
+    width: 45%;
+}
+
+.prince-text h2 {
+    padding-top: 5%;
+}
+
+.prince-text p {
+    padding-top: 5%;
+    text-align: justify;
+}
+
+.quote {
+    font-size: .875rem;
+}
+
+.prince-fiche {
+    width: 55%;
+    text-align: center;
+}
+
+.prince-photo {
+    padding: 0% 25%;
+}
+
+.prince-photo img {
+    width: 100%;
+}
+
+.prince-photo img:hover {
+    transform: scale(1.2);
+}
+
+.fiche-text {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    margin: -37% 20% 0% 20%;
+    padding-top: 40%;
+}
+
+.fiche-text h3 {
+    color: var(--deep-blue);
+    font-size: 1.5rem;
+}
+
+.fiche-text div button {
+    background-color: var(--clear-blue);
+    font-size: 0.5rem;
+    padding: 4% 7% 4% 7%;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--white);
+}
+
+.fiche-text p {
+    color: var(--deep-blue);
+    font-size: .8rem;
+    text-align: left;
+    padding-top: 0.5rem;
+}
+
+.fiche-text span {
+    font-weight: bold;
+}
+
+.alline {
+    display: flex;
+    flex-direction: column;
+    padding: 7% 15% 15% 15%;
+}
+
+.fiche-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#panther-costume {
+    padding-top: 15%;
+}
+
+#panther-costume img {
+    width: 509px;
+    height: 435px;
+}
+
+#panther-costume img:hover {
+    transform: scale(1.3);
+}
+
+
+/* Fin section Prince */
+
+
+/* FORMULAIRE */
+
+#my-form {
+    background-image: url(../assets/Accueil/Pantherhome7.png);
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.background-form {
+    margin-top: 10%;
+    padding: 3% 0% 3% 0%;
+    width: 60%;
+    text-align: center;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.897), rgba(242, 206, 242, 0.2));
+    border-radius: 10rem;
+    margin-bottom: 5%;
+}
+
+.background-form p {
+    color: var(--deep-blue);
+    padding-bottom: 0.5rem;
+}
+
+.background-form h1 {
+    font-family: "Cantarell";
+    color: var(--deep-blue);
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.background-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-form input {
+    width: 520px;
+    height: 56px;
+    background: transparent;
+    border-radius: 38px;
+    padding-left: 1rem;
+    margin-top: 2rem;
+    border: solid 1px var(--deep-blue);
+}
+
+.background-form textarea {
+    height: 200px;
+    width: 520px;
+    background: none;
+    border-radius: 38px;
+    padding-left: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border: solid 1px var(--deep-blue);
+}
+
+.background-form button {
+    width: 174px;
+    height: 54px;
+    border-radius: 38px;
+    background-color: var(--rose);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.background-form button:hover {
+    box-shadow: 4px 4px 3px #021740;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--clear-blue);
+    padding: 6rem 3rem 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    gap: 6rem;
+}
+
+.footer-logo {
+    position: relative;
+    width: 300px;
+    height: 335px;
+}
+
+.footer-logo:hover,
+.reseaux-hover:hover {
+    transform: scale(1.1);
+}
+
+#bulles {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo-bulles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 7rem;
+}
+
+.footer-reseaux {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.footer-droits {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: smaller;
+    list-style-type: disc;
+}
+
+.footer-droits li {
+    margin-right: 0.625rem;
+}
+
+.list1 {
+    list-style-type: none;
+}
+
+.footer-titre {
+    font-size: 1.375rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 2rem;
+}
+
+.lienfooter:hover {
+    text-decoration: underline;
+}
+
+.aside {
+    position: fixed;
+    top: 0;
+    height: 50vh;
+    left: 0.5rem;
+    border-left: 3px solid #9e91b7;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-line {
+    height: 100%;
+    border-right: 3px solid #9e91b7;
+}
+
+.aside-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0 0.2rem;
+    margin-right: -0.5rem;
+}
+
+.aside-socials a:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(0%) hue-rotate(235deg) brightness(104%) contrast(101%);
+}
+
+
+/* Fade In */
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+.fade-in.fade-in-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* POPUP */
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #021740;
+    opacity: .9;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container.active {
+    display: flex;
+}
+
+.popup {
+    background: linear-gradient(#07338C, #3D2DA6);
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.popup button {
+    position: absolute;
+    top: .625rem;
+    right: .625rem;
+    background-color: inherit;
+    font-size: 1.5rem;
+    opacity: .5;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 2rem;
+    height: 1.7rem;
+    border-radius: 0px;
+}
+
+.popup p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
