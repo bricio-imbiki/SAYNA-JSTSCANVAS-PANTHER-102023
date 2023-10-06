@@ -53,7 +53,7 @@ window.addEventListener("scroll", function() {
         banner.style.transform = "translateX(-100%)";
     }
 });
-
+//animation qui rend l'image gauche du slider scale(1.3) en fonction des boutons du slider
 document.addEventListener('DOMContentLoaded', function() {
     var nextButton = document.querySelector('.swiper-button-next');
     var prevButton = document.querySelector('.swiper-button-prev');
