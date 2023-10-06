@@ -173,27 +173,31 @@ nav {
 #personnages {
     display: flex;
     flex-direction: row;
-    padding-left: 10%;
+    padding-left: 1%;
 }
 
 .character {
     display: flex;
-    flex-direction: row;
-    background-color: var(--deep-blue);
-    padding-left: 2%;
-    width: 43.5%;
+    background: rgb(3, 20, 54);
+    width: 100%;
 }
 
-.personnage {
-    width: 12%;
-    padding-left: 1%;
-    background-color: var(--deep-blue);
+.cont {
+    width: 90vw;
+    margin-left: 5rem;
+    background: rgb(3, 20, 54);
+    border-radius: 20px;
+}
+
+.cont img {
+    transition: transform 0.3s ease;
 }
 
 .personnages-text {
-    padding-top: 5%;
-    padding-left: 5%;
+    font-size: 10px;
     width: 60%;
+    text-align: justify;
+    padding: 20px 50px 0 50px;
 }
 
 .personnages-text h2 {
@@ -230,7 +234,6 @@ nav {
 }
 
 .personnages-img img {
-    width: auto;
     height: 220px;
     border-radius: 5%;
 }
