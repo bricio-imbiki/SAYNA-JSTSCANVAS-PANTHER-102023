@@ -184,12 +184,6 @@ nav {
     width: 43.5%;
 }
 
-.personnage {
-    width: 12%;
-    padding-left: 1%;
-    background-color: var(--deep-blue);
-}
-
 .personnages-text {
     padding-top: 5%;
     padding-left: 5%;
