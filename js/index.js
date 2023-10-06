@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
             var screenWidth = window.innerWidth;
             var columnWidth = screenWidth / 2;
             var personnagesLeftPosition = personnages.getBoundingClientRect().left;
-            personnages.classList.remove('img-active');
+            personnages.style.transform = 'scale(1.3)';
             if (personnagesLeftPosition < columnWidth) {
-                personnages.classList.add('img-active');
+                personnages.style.transform = 'scale(1)';
             }
         });
     });
@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', function() {
         personnagess.forEach(function(personnages) {
             var screenWidth = window.innerWidth;
-            var columnWidth = screenWidth / 4;
+            var columnWidth = screenWidth / 2;
             var personnagesRightPosition = personnages.getBoundingClientRect().right;
-            personnages.classList.remove('img-active');
+            personnages.style.transform = 'scale(1.3)';
             if (personnagesRightPosition < columnWidth) {
-                personnages.classList.add('img-active');
+                personnages.style.transform = 'scale(1)';
             }
         });
     });
